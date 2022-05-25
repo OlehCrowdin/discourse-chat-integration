@@ -1,9 +1,3 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 es:
   js:
     admin:
@@ -75,6 +69,9 @@ es:
           group: "Esta regla se aplicará a las publicaciones que hagan referencia a este grupo."
           tags: "Si se especifica, esta regla solo se aplicará a los temas que tengan al menos una de estas etiquetas"
       provider:
+        #######################################
+        ########### SLACK STRINGS #############
+        #######################################
         slack:
           title: "Slack"
           param:
@@ -84,6 +81,9 @@ es:
           errors:
             action_prohibited: "Este bot no tiene permiso para publicar en ese canal."
             channel_not_found: "El canal especificado no existe en Slack"
+        #######################################
+        ########## TELEGRAM STRINGS ###########
+        #######################################
         telegram:
           title: "Telegram"
           param:
@@ -96,6 +96,9 @@ es:
           errors:
             channel_not_found: "El canal especificado no existe en Telegram"
             forbidden: "El bot no tiene permiso para publicar en este canal"
+        #######################################
+        ########### DISCORD STRINGS ###########
+        #######################################
         discord:
           title: "Discord"
           param:
@@ -105,6 +108,9 @@ es:
             webhook_url:
               title: URL del webhook
               help: La URL del webhook creada en los ajustes de tu servidor de Discord
+        #######################################
+        ######### MATTERMOST STRINGS ##########
+        #######################################
         mattermost:
           title: "Mattermost"
           param:
@@ -113,6 +119,9 @@ es:
               help: "por ejemplo, #canal, @nombredeusuario."
           errors:
             channel_not_found: "El canal especificado no existe en Mattermost"
+        #######################################
+        ############ MATRIX STRINGS ###########
+        #######################################
         matrix:
           title: "Matrix"
           param:
@@ -125,6 +134,9 @@ es:
           errors:
             unknown_token: "Token de acceso no válido"
             unknown_room: "La ID de la sala no es válida"
+        #######################################
+        ############# ZULIP STRINGS ###########
+        #######################################
         zulip:
           title: "Zulip"
           param:
@@ -136,6 +148,9 @@ es:
               help: "El asunto que el mensaje enviado por el bot debería tener"
           errors:
             does_not_exist: "El stream especificado no existe en Zulip"
+        #######################################
+        ######## ROCKET CHAT STRINGS ##########
+        #######################################
         rocketchat:
           title: "Rocket.Chat"
           param:
@@ -144,6 +159,9 @@ es:
               help: "por ejemplo, #canal, @nombredeusuario."
           errors:
             invalid_channel: "Ese canal no existe en Rocket Chat"
+        #######################################
+        ############ GITTER STRINGS ###########
+        #######################################
         gitter:
           title: "Gitter"
           param:
@@ -153,12 +171,18 @@ es:
             webhook_url:
               title: "URL del webhook"
               help: "La URL que se proporciona al crear una nueva integración en una sala de Gitter."
+        #######################################
+        ########## FLOWDOCK STRINGS ###########
+        #######################################
         flowdock:
           title: "Flowdock"
           param:
             flow_token:
               title: "Token del flujo"
               help: "El token de flujo que se proporciona después de crear un origen para un flujo al que deseas enviar mensajes."
+        #######################################
+        ########## GROUPME STRINGS ###########
+        #######################################
         groupme:
           title: "GroupMe"
           param:
@@ -168,6 +192,9 @@ es:
           errors:
             not_found: "No se encontró la ruta en la que intentaste publicar tu mensaje. Comprueba el ID del bot en la configuración del sitio."
             instance_names_issue: "nombres de instancias con formato incorrecto o no proporcionadas"
+        ############################################
+        ######### MICROSOFT TEAMS STRINGS ##########
+        ############################################
         teams:
           title: "Microsoft Teams"
           param:
@@ -199,3 +226,14 @@ es:
             webhook_url:
               title: "URL del webhook"
               help: "La URL proporcionada al crear un nuevo webhook"
+    discourse_automation:
+      scriptables:
+        send_slack_message:
+          title: Send Slack message
+          fields:
+            message:
+              label: Message
+            url:
+              label: URL
+            channel:
+              label: Channel
