@@ -1,0 +1,5 @@
+# Configuration file for discourse-translator-bot
+
+files:
+- source: /config/locales/client.en.yml
+- source: /config/locales/server.en.yml
