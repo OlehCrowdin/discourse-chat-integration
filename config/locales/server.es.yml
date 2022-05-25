@@ -1,126 +1,170 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 es:
   site_settings:
-    chat_integration_enabled: 'Habilitar el complemento discourse-chat-integration'
-    chat_integration_discourse_username: 'Nombre de usuario con el que se actuará cuando se obtenga el contenido.'
-    chat_integration_delay_seconds: 'Número de segundos que se deben esperar después de la creación de una publicación antes de empezar a enviar notificaciones de chat.'
-    chat_integration_slack_username: "Nombre de usuario del bot que publica en Slack"
-    chat_integration_slack_enabled: 'Habilitar el proveedor de integración de chat de Slack'
-    chat_integration_slack_access_token: 'Token de acceso de OAuth para autenticación con Slack'
-    chat_integration_slack_incoming_webhook_token: 'El token de verificación usado para autenticar solicitudes entrantes'
-    chat_integration_slack_excerpt_length: 'Longitud del extracto de publicaciones de Slack'
-    chat_integration_slack_icon_url: 'Icono para publicaciones en Slack (por defecto el logo del foro)'
-    chat_integration_slack_outbound_webhook_url: "Para usar el sistema de «webhook entrante» de Slack en vez de la API OAuth. No recomendado."
+    chat_integration_enabled: 'Activar el plugin discourse-chat-integration'
+    chat_integration_discourse_username: 'Nombre de usuario del usuario para actuar como cuando se obtiene el contenido.'
+    chat_integration_delay_seconds: 'Número de segundos a esperar después de la creación del post antes de enviar notificaciones del chat'
+    #######################################
+    ########## SLACK SETTINGS #############
+    #######################################
+    chat_integration_slack_username: "Nombre de usuario del bot con el que enviar slack"
+    chat_integration_slack_enabled: 'Habilitar el proveedor de integración de chats slack'
+    chat_integration_slack_access_token: 'Token de acceso de OAuth para autenticarse con Slack'
+    chat_integration_slack_incoming_webhook_token: 'El token de verificación utilizado para autenticar solicitudes entrantes'
+    chat_integration_slack_excerpt_length: 'Longitud del extracto del post de Slack'
+    chat_integration_slack_icon_url: 'Icono con el que publicar en slack (por defecto en el logo del foro)'
+    chat_integration_slack_outbound_webhook_url: "Para usar el sistema Slack 'Webhook entrante' en lugar de la API OAuth. No recomendado."
+    chat_integration_slack_transcript_quote: '¿Envolver la transcripción de la slack en [quote] etiquetas?'
     errors:
-      chat_integration_slack_api_configs_are_empty: "Debes introducir una URL del webhook de salida, o un token de acceso"
-    chat_integration_telegram_enabled: "Habilitar el proveedor de integración de chat de Telegram"
-    chat_integration_telegram_access_token: "El token de acceso de tu bot del botfather de Telegram"
-    chat_integration_telegram_excerpt_length: "Longitud del extracto de publicaciones de Telegram"
-    chat_integration_telegram_enable_slash_commands: "Permitir que las suscripciones de Telegram se administren mediante 'comandos de barra'"
-    chat_integration_discord_enabled: "Habilitar el proveedor de integración de chat de Discord"
-    chat_integration_discord_message_content: "El mensaje que se incluye encima del resumen al enviar una notificación a Discord"
-    chat_integration_discord_excerpt_length: "Longitud del extracto de la publicación de Discord"
-    chat_integration_mattermost_enabled: "Habilitar el proveedor de integración de chat de Mattermost"
+      chat_integration_slack_api_configs_are_empty: "Debe introducir una URL de webhook saliente, o un token de acceso"
+    #######################################
+    ######### TELEGRAM SETTINGS ###########
+    #######################################
+    chat_integration_telegram_enabled: "Activar el proveedor de integración de chats de Telegram"
+    chat_integration_telegram_access_token: "Token de acceso de tu bot desde el botfather de Telegram"
+    chat_integration_telegram_excerpt_length: "Longitud del extracto del post de telegrama"
+    chat_integration_telegram_enable_slash_commands: "Permitir que las suscripciones de telegram se gestionen usando 'comandos slash'"
+    #######################################
+    ########## DISCORD SETTINGS ###########
+    #######################################
+    chat_integration_discord_enabled: "Habilitar el proveedor de integración de chats de Discord"
+    chat_integration_discord_message_content: "El mensaje a incluir arriba del resumen al enviar una notificación a Discord"
+    chat_integration_discord_excerpt_length: "Longitud del extracto del post de Discord"
+    #######################################
+    ######## MATTERMOST SETTINGS ##########
+    #######################################
+    chat_integration_mattermost_enabled: "Habilitar el proveedor de integración de chats de Mattermost"
     chat_integration_mattermost_webhook_url: 'URL del webhook de Mattermost'
-    chat_integration_mattermost_incoming_webhook_token: 'El token de verificación usando para autentificar solicitudes entrantes'
-    chat_integration_mattermost_icon_url: "Icono para publicaciones en Mattermost (por defecto el logo del foro)"
-    chat_integration_mattermost_excerpt_length: "Longitud del extracto de publicaciones de Mattermost"
-    chat_integration_matrix_enabled: "Habilitar el proveedor de integración de chat de Matrix"
-    chat_integration_matrix_homeserver: "Servidor doméstico al que conectarse. Asegúrate de incluir el protocolo"
-    chat_integration_matrix_access_token: "Token de acceso para la cuenta de Matrix del bot"
-    chat_integration_matrix_excerpt_length: "Longitud del extracto de la publicación de Matrix"
-    chat_integration_matrix_use_notice: "Usar aviso en lugar de un mensaje simple"
-    chat_integration_zulip_enabled: "Habilitar el proveedor de integración de chat de Zulip"
-    chat_integration_zulip_server: "La URL base de tu servidor de Zulip. Asegúrate de incluir http(s)://"
-    chat_integration_zulip_bot_email_address: "La dirección de correo electrónico asociada con tu bot de Zulip"
-    chat_integration_zulip_bot_api_key: "La clave API para tu bot de Zulip"
-    chat_integration_zulip_excerpt_length: "Longitud del extracto de la publicación de Zulip"
-    chat_integration_rocketchat_enabled: "Habilitar el proveedor de integración de chat de Rocket Chat"
-    chat_integration_rocketchat_webhook_url: "La URL del webhook de integración de Rocket Chat"
-    chat_integration_rocketchat_excerpt_length: "Longitud del extracto de la publicación de Rocket Chat"
-    chat_integration_gitter_enabled: "Habilitar el proveedor de integración de chat de Gitter"
-    chat_integration_flowdock_enabled: "Habilitar el proveedor de integración de chat de Flowdock"
-    chat_integration_flowdock_excerpt_length: "Longitud del extracto de la publicación de Flowdock"
-    chat_integration_groupme_enabled: "Habilitar el proveedor de integración de chat de Groupme"
-    chat_integration_groupme_excerpt_length: "Longitud del extracto de la publicación de Groupme"
-    chat_integration_groupme_bot_ids: "ID de bots *requeridos*, separados por ',' si hay varios"
-    chat_integration_groupme_instance_names: "Nombre del chat de GroupMe *obligatorio*, separado por ',' si hay varios (en el mismo orden que los ID de los bots)"
-    chat_integration_teams_enabled: "Habilitar el proveedor de integración de chat de Microsoft Teams"
-    chat_integration_teams_excerpt_length: "Longitud del extracto de la publicación de Microsoft Team"
+    chat_integration_mattermost_incoming_webhook_token: 'El token de verificación utilizado para autenticar solicitudes entrantes'
+    chat_integration_mattermost_icon_url: "Icono para las publicaciones en Mattermost (por defecto en el logo del foro)"
+    chat_integration_mattermost_excerpt_length: "Longitud del extracto del post Mattermost"
+    #######################################
+    ############ MATRIX SETTINGS ##########
+    #######################################
+    chat_integration_matrix_enabled: "Activar el proveedor de integración de chats Momex"
+    chat_integration_matrix_homeserver: "Servidor de inicio para conectarse. Asegúrese de incluir el protocolo"
+    chat_integration_matrix_access_token: "Token de acceso para la cuenta MMercox del bot"
+    chat_integration_matrix_excerpt_length: "Longitud del extracto del post matexto"
+    chat_integration_matrix_use_notice: "Usar aviso en lugar de mensaje plano"
+    #######################################
+    ########### ZULIP SETTINGS ############
+    #######################################
+    chat_integration_zulip_enabled: "Habilitar el proveedor de integración de chat Zulip"
+    chat_integration_zulip_server: "La URL base para su servidor Zulip. Asegúrese de incluir http(s)://"
+    chat_integration_zulip_bot_email_address: "La dirección de correo electrónico asociada con tu bot Zulip"
+    chat_integration_zulip_bot_api_key: "La clave API para tu bot Zulip"
+    chat_integration_zulip_excerpt_length: "Longitud del extracto del post Zulip"
+    #######################################
+    ###### ROCKET CHAT SETTINGS ###########
+    #######################################
+    chat_integration_rocketchat_enabled: "Activar el proveedor de integración de chat de Rocket Chat"
+    chat_integration_rocketchat_webhook_url: "La URL para el webhook de integración de Rocket Chat"
+    chat_integration_rocketchat_excerpt_length: "Longitud del extracto del post del chat de cohete"
+    #######################################
+    ############ GITTER SETTINGS ##########
+    #######################################
+    chat_integration_gitter_enabled: "Activar el proveedor de integración de chat de Gitter"
+    #######################################
+    ########## FLOWDOCK SETTINGS ##########
+    #######################################
+    chat_integration_flowdock_enabled: "Activar el proveedor de integración de chat de Flowdock"
+    chat_integration_flowdock_excerpt_length: "Longitud del extracto del post Flowdock"
+    #######################################
+    ########## GROUPME SETTINGS ##########
+    #######################################
+    chat_integration_groupme_enabled: "Activar el proveedor de integración de chat de Groupme"
+    chat_integration_groupme_excerpt_length: "Longitud del extracto del post de grupo"
+    chat_integration_groupme_bot_ids: "*requerido* ID de bot, separados por ',' si hay múltiples"
+    chat_integration_groupme_instance_names: " *requerido* Nombre del chat de GroupMe, separado por ',' si hay múltiples (mismo orden que ID de bot)"
+    ###########################################
+    ######## MICROSOFT TEAMS SETTINGS #########
+    ###########################################
+    chat_integration_teams_enabled: "Activar el proveedor de integración de chat de Microsoft Teams"
+    chat_integration_teams_excerpt_length: "Longitud del extracto del post del equipo de Microsoft"
+    ###########################################
+    ######## WEBEX TEAMS SETTINGS #########
+    ###########################################
     chat_integration_webex_enabled: "Habilitar el proveedor de integración de chat de Webex Teams"
-    chat_integration_webex_excerpt_length: "Longitud del extracto de la publicación de Webex Team"
-    chat_integration_google_enabled: "Habilitar el proveedor de integración de chat «Google Chat»"
-    chat_integration_google_excerpt_length: "Longitud del extracto de la publicación de Google Chat"
+    chat_integration_webex_excerpt_length: "Longitud del extracto del post del equipo Webex"
+    ###########################################
+    ######## GOOGLE SETTINGS #########
+    ###########################################
+    chat_integration_google_enabled: "Habilitar el proveedor de integración de chat 'Google Chat'"
+    chat_integration_google_excerpt_length: "Longitud del extracto del mensaje de Google Chat"
+  discourse_automation:
+    scriptables:
+      send_slack_message:
+        title: Enviar mensaje de Slack
   chat_integration:
     all_categories: "(todas las categorías)"
     deleted_category: "(categoría eliminada)"
     deleted_group: "(grupo eliminado)"
     group_mention_template: "menciones de: @%{name}"
     group_message_template: "mensajes a: @%{name}"
-    admin_error: "Algunos canales de integración de chat tienen errores. Visita <a href='%{base_path}/admin/plugins/chat-integration'>la sección de integración de chat</a> para saber más."
+    admin_error: "Algunos canales de integración de chat tienen errores. Visite <a href='%{base_path}/admin/plugins/chat-integration'>la sección de integración de chat</a> para obtener más información."
     provider:
+      #######################################
+      ########## SLACK STRINGS ##############
+      #######################################
       slack:
         status:
           header: |
             *Reglas para este canal*
-            (si varias reglas coinciden con una publicación, se ejecuta la regla superior)
-          no_rules: "No hay reglas establecidas para este canal. Ejecuta `/discourse help` para obtener instrucciones."
-          rule_string: "*%{index})* *%{filter}* publicaciones en *%{category}*"
-          rule_string_tags_suffix: "con las etiquetas: *%{tags}*"
-        parse_error: "Lo siento, no lo he entendido. Ejecuta `/discourse help` para obtener instrucciones."
+            (si varias reglas coinciden con una publicación, la regla superior se ejecuta)
+          no_rules: "No hay reglas configuradas para este canal. Ejecuta `/discourse help` para las instrucciones."
+          rule_string: "*%{index})*%{filter}* publicaciones en *%{category}*"
+          rule_string_tags_suffix: " con etiquetas: *%{tags}*"
+        parse_error: "Lo siento, no he entendido eso. Ejecuta `/discourse help` para las instrucciones."
         create:
           created: "Regla creada con éxito"
-          updated: "Regla actualizada con éxito"
-          error: "Lo sentimos, se produjo un error al crear esa regla."
+          updated: "Regla actualizada correctamente"
+          error: "Lo sentimos, se ha producido un error al crear esa regla."
         delete:
-          success: "Regla creada con éxito"
-          error: "Lo sentimos, se produjo un error al eliminar esa regla. Ejecuta `/discourse status` para obtener una lista de reglas."
+          success: "Regla eliminada correctamente"
+          error: "Lo sentimos, ha ocurrido un error al eliminar esa regla. Ejecuta `/discourse status` para una lista de reglas."
         not_found:
-          tag: "La etiqueta *%{name}* no se encuentra."
-          category: "No se puede encontrar la categoría *%{name}Categorías disponibles: *%{list}*"
+          tag: "The *%{name}* tag cannot be found."
+          category: "La categoría *%{name}* no se puede encontrar. Categorías disponibles: *%{list}*"
         help: |
           *Nueva regla:* `/discourse [thread|watch|follow|mute] [category] [tag:name]`
           (debes especificar un tipo de regla y al menos una categoría o etiqueta)
-          - *thread*: notifica a este canal los nuevos temas, las respuestas al hilo si es posible
-          - *watch*: notificar a este canal los nuevos temas y las nuevas respuestas
-          - *follow*: notificar a este canal los nuevos temas
-          - *mute*: bloquear las notificaciones a este canal
+          - *hilo* - notificar a este canal para nuevos temas, thread responde si es posible
+          - *watch* - notificar a este canal para nuevos temas y nuevas respuestas
+          - *seguir* - notificar este canal para nuevos temas
+          - *silenciar* - bloquear notificaciones a este canal
 
-          *Eliminar regla:* `/discourse remove [rule number]`
-          (`[rule number]` se puede encontrar ejecutando `/discourse status`)
+          *Eliminar regla:* `/discourse remove [número de regla]`
+          (`[número de regla]` se puede encontrar ejecutando `/discourse status`)
 
-          *Lista de reglas:* `/discourse status`
+          *Listas reglas:* `/discourse status`
 
-          *[Experimental] Transcripción de la publicación:* `/discourse post [n]`
-          Crea un tema borrador en discourse que contenga los últimos `n` mensajes de este canal
+          *[Experimental] Post transcript:* `/discourse post [n]`
+          Crea un borrador de tema en el disco que contiene las últimas publicaciones `n` en este canal
 
           *Ayuda:* `/discourse help`
         transcript:
           modal_title: "Crear transcripción"
-          modal_description: "Todos los mensajes del hilo se agruparán en una única publicación del foro. Se te dará la oportunidad de editar la transcripción antes de publicarla."
+          modal_description: "Todos los mensajes del hilo se ensamblarán en un solo mensaje del foro. Se te dará la oportunidad de editar la transcripción antes de publicar."
           transcript_ready: "Transcripción lista"
           continue_on_discourse: "Continuar en el foro"
-          error: "Algo salió mal al generar la transcripción, ¡lo sentimos!"
-          post_to_discourse: "Haz clic aquí para generar un borrador de publicación en Discourse con una transcripción"
-          api_required: "Lo sentimos, esta integración no está configurada para admitir la publicación de transcripciones."
+          error: "Algo salió mal al construir la transcripción, ¡lo sentimos!"
+          post_to_discourse: "Haz clic aquí para redactar una publicación en Discourse con una transcripción"
+          api_required: "Lo sentimos, esta integración no está configurada para soportar transcripciones de publicaciones."
           view_on_slack: "Ver en %{name} en Slack"
-          first_message_pretext: "comenzando hace %{n} mensajes:"
-          last_message_pretext: "y terminando hace %{n} mensajes:"
+          first_message_pretext: "comenzando hace %{n}:"
+          last_message_pretext: "y terminando hace %{n}:"
           posted_in: "publicado en %{name}"
-          change_first_message: "Cambiar el primer mensaje..."
-          change_last_message: "Cambiar el último mensaje.."
+          change_first_message: "Cambiar primer mensaje..."
+          change_last_message: "Cambiar el último mensaje..."
           loading: "Cargando la transcripción..."
-          error_users: "Error: no se pueden obtener los usuarios de Slack"
-          error_history: "Error: no se puede recuperar el historial del canal de Slack"
-          error_ts: "Error: no se puede obtener el mensaje solicitado de Slack"
+          error_users: "Error: no se pueden obtener usuarios de Slack"
+          error_history: "Error: No se puede obtener el historial del canal de Slack"
+          error_ts: "Error: No se puede obtener el mensaje solicitado de Slack"
+      #######################################
+      ########## TELEGRAM STRINGS ###########
+      #######################################
       telegram:
-        unknown_chat: "Este chat no está configurado en %{site_title}. Pide a un administrador que añada un canal con «ID de chat» %{chat_id}."
-        known_chat: "Este chat está configurado en %{site_title}. Configúralo en el panel del administrador. (ID del chat: %{chat_id})"
+        unknown_chat: "Este chat no está configurado en %{site_title}. Pídele a un administrador que añada un canal con 'ID de Chat' %{chat_id}."
+        known_chat: "Este chat está configurado en %{site_title}. Configurarlo en el panel de administración. (ID de Chat: %{chat_id})"
         message: |-
           <b>%{user}</b> publicó en <a href="%{post_url}">%{title}</a>
 
@@ -129,84 +173,105 @@ es:
           header: |
             <b>Reglas para este canal</b>
             (si varias reglas coinciden con una publicación, se ejecuta la regla superior)
-          no_rules: "No hay reglas configuradas para este canal. Ejecuta <code>/help</code> para obtener instrucciones."
+          no_rules: "No hay reglas configuradas para este canal. Ejecute <code>/help</code> para instrucciones."
           rule_string: "<b>%{index})</b> <b>%{filter}</b> publicaciones en <b>%{category}</b>"
           rule_string_tags_suffix: " con etiquetas: <b>%{tags}</b>"
-        parse_error: "Lo siento, no lo he entendido. Ejecuta <code>/help</code> para obtener instrucciones."
+        parse_error: "Lo siento, no lo entiendo. Ejecuta <code>/help</code> para instrucciones."
         create:
           created: "Regla creada con éxito"
-          updated: "Regla actualizada con éxito"
-          error: "Lo sentimos, se produjo un error al crear esa regla."
+          updated: "Regla actualizada correctamente"
+          error: "Lo sentimos, se ha producido un error al crear esa regla."
         delete:
-          success: "Regla eliminada con éxito"
-          error: "Lo sentimos, se produjo un error al eliminar esta regla. Ejecuta <code>/status</code> para obtener una lista de reglas."
+          success: "Regla eliminada correctamente"
+          error: "Lo sentimos, se ha producido un error al eliminar esa regla. Ejecute <code>/status</code> para una lista de reglas."
         not_found:
-          tag: "No se puede encontrar la etiqueta <b>%{name}</b>."
-          category: "No se encuentra la categoría <b>%{name}</b>. Categorías disponibles: <b>%{list}</b>"
+          tag: "La etiqueta <b>%{name}</b> no se ha encontrado."
+          category: "La categoría <b>%{name}</b> no se puede encontrar. Categorías disponibles: <b>%{list}</b>"
         help: |
-          <b>Nueva regla:</b> <code>/[watch|follow|mute] [category] [tag:name]</code>
-          (debes especificar un tipo de regla y al menos una categoría o etiqueta)
-          - <b>watch</b>: notifica a este canal en cada nuevo tema y respuesta
-          - <b>follow</b>: notifica a este canal en cada nuevo tema
-          - <b>mute</b>: bloquear notificaciones a este canal
+          <b>New rule:</b> <code>/[watch|follow|mute] [category] [tag:name]</code>
+          (you must specify a rule type and at least one category or tag)
+          - <b>watch</b> – notify this channel for new topics and new replies
+          - <b>follow</b> – notify this channel for new topics
+          - <b>mute</b> – block notifications to this channel
 
-          <b>Eliminar regla:</b> <code>/remove [rule number]</code>
-          (el <code>[rule number]</code> puede encontrarse ejecutando <code>/status</code>)
+          <b>Remove rule:</b> <code>/remove [rule number]</code>
+          (<code>[rule number]</code> can be found by running <code>/status</code>)
 
-          <b>Lista de reglas:</b> <code>/status</code>
+          <b>List rules:</b> <code>/status</code>
 
-          <b>Ayuda:</b> <code>/help</code>
+          <b>Help:</b> <code>/help</code>
+      #######################################
+      ########### HIPCHAT STRINGS ###########
+      #######################################
       hipchat:
         message: <b>%{user}</b> publicó en <a href="%{post_url}">%{title}</a>
+      #######################################
+      ######## MATTERMOST STRINGS ###########
+      #######################################
       mattermost:
         status:
           header: |
             *Reglas para este canal*
-            (si varias reglas coinciden con una publicación, se ejecuta la regla superior)
-          no_rules: "No hay reglas establecidas para este canal. Ejecuta `/discourse help` para obtener instrucciones."
-          rule_string: "*%{index})* *%{filter}* publicaciones en *%{category}*"
+            (si varias reglas coinciden con una publicación, la regla superior se ejecuta)
+          no_rules: "No hay reglas configuradas para este canal. Ejecuta `/discourse help` para las instrucciones."
+          rule_string: "*%{index})*%{filter}* publicaciones en *%{category}*"
           rule_string_tags_suffix: " con etiquetas: *%{tags}*"
-        parse_error: "Lo siento, no lo he entendido. Ejecuta `/discourse help` para obtener instrucciones."
+        parse_error: "Lo siento, no he entendido eso. Ejecuta `/discourse help` para las instrucciones."
         create:
           created: "Regla creada con éxito"
-          updated: "Regla actualizada con éxito"
-          error: "Lo sentimos, se produjo un error al crear esa regla."
+          updated: "Regla actualizada correctamente"
+          error: "Lo sentimos, se ha producido un error al crear esa regla."
         delete:
-          success: "Regla eliminada con éxito"
-          error: "Lo sentimos, se produjo un error al eliminar esa regla. Ejecuta `/discourse status` para obtener una lista de reglas."
+          success: "Regla eliminada correctamente"
+          error: "Lo sentimos, ha ocurrido un error al eliminar esa regla. Ejecuta `/discourse status` para una lista de reglas."
         not_found:
-          tag: "La etiqueta *%{name}* no se encuentra."
-          category: "No se puede encontrar la categoría *%{name} Categorías disponibles: *%{list}*"
+          tag: "The *%{name}* tag cannot be found."
+          category: "La categoría *%{name}* no se puede encontrar. Categorías disponibles: *%{list}*"
         help: |
           *Nueva regla:* `/discourse [watch|follow|mute] [category] [tag:name]`
           (debes especificar un tipo de regla y al menos una categoría o etiqueta)
-          - *watch*: notifica a este canal en cada nuevo tema y respuesta
-          - *follow*: notifica a este canal en cada nuevo tema
-          - *mute*: bloquear notificaciones a este canal
+          - *watch* - notificar este canal para nuevos temas y nuevas respuestas
+          - *seguir* - notificar a este canal para nuevos temas
+          - *mute* - bloquear notificaciones a este canal
 
-          *Eliminar regla:* `/discourse remove [rule number]`
-          (el `[rule number]` puede encontrarse ejecutando `/discourse status`)
+          *Eliminar regla:* `/discourse remove [regla number]`
+          (`[regla número]` se puede encontrar ejecutando `/discourse status`)
 
-          *Lista de reglas:* `/discourse status`
+          *Lista reglas:* `/discourse status`
 
           *Ayuda:* `/discourse help`
+      #######################################
+      ############ MATRIX STRINGS ###########
+      #######################################
       matrix:
-        text_message: "%{user} publicó en %{title} - %{post_url}"
+        text_message: "%{user} publicado en %{title} - %{post_url}"
         formatted_message: |
           <b>%{user}</b> publicó en <b><a href='%{post_url}'>%{title}</a></b>
           <blockquote>
           %{excerpt}
           </blockquote>
+      #######################################
+      ############# ZULIP STRINGS ###########
+      #######################################
       zulip:
         message: |
           **%{user}** publicó en **[%{title}](%{post_url})**
-          ~~~quote
+          ~~~presupuesto
           %{excerpt}
           ~~~
+      #######################################
+      ########### FLOWDOCK STRINGS ##########
+      #######################################
       flowdock:
-        message_title: "publicó"
+        message_title: "publicado"
+      #######################################
+      ########### GROUPME STRINGS ##########
+      #######################################
       groupme:
-        message_title: "publicó"
+        message_title: "publicado"
+      #######################################
+      ############ GOOGLE STRINGS ###########
+      #######################################
       google:
         new_post: "Nueva publicación en %{site_title}"
         new_topic: "Nuevo tema en %{site_title}"
