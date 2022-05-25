@@ -1,8 +1,8 @@
 files:
   - source: /config/locales/*.en.yml
     translation: /config/locales/%file_name%.%two_letters_code%.yml
-    translation_replace: 
-      ".en.": "."
+    translation_replace:
+      .en.: .
     languages_mapping:
       two_letters_code:
         zh-CN: zn_CN
