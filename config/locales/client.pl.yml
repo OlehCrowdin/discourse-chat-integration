@@ -1,0 +1,239 @@
+pl:
+  js:
+    admin:
+      site_settings:
+        categories:
+          chat_integration: "Integracje czatu"
+    chat_integration:
+      menu_title: "Integracje czatu"
+      settings: "Ustawienia"
+      no_providers: "Musisz włączyć niektórych dostawców w ustawieniach wtyczki"
+      channels_with_errors: "Niektóre kanały dla tego dostawcy nie powiodły się po raz ostatni. Kliknij ikonę błędu, aby dowiedzieć się więcej."
+      channel_exception: "Wystąpił nieznany błąd podczas ostatniego wysłania wiadomości do tego kanału."
+      group_mention_template: "Wzmianki: @%{name}"
+      group_message_template: "Wiadomości do: @%{name}"
+      choose_group: "(wybierz grupę)"
+      all_categories: "(wszystkie kategorie)"
+      all_tags: "(wszystkie tagi)"
+      create_rule: "Utwórz regułę"
+      create_channel: "Utwórz kanał"
+      delete_channel: "Usuń"
+      test_channel: "Badanie"
+      edit_channel: "Edytuj"
+      channel_delete_confirm: "Czy na pewno chcesz usunąć ten kanał? Wszystkie powiązane reguły zostaną usunięte."
+      test_modal:
+        title: "Wyślij wiadomość testową"
+        topic: "Temat"
+        send: "Wyślij wiadomość testową"
+        close: "Zamknij"
+        error: "Wystąpił nieznany błąd podczas wysyłania wiadomości. Sprawdź dzienniki witryny, aby uzyskać więcej informacji."
+        success: "Wiadomość wysłana pomyślnie"
+      type:
+        normal: Normalny
+        group_message: Wiadomość grupowa
+        group_mention: Group Mention
+      filter:
+        mute: 'Mute'
+        follow: 'First post only'
+        watch: 'All posts and replies'
+        thread: 'All posts with threaded replies'
+      rule_table:
+        filter: "Filter"
+        category: "Category"
+        tags: "Tags"
+        edit_rule: "Edytuj"
+        delete_rule: "Usuń"
+      edit_channel_modal:
+        title: "Edit Channel"
+        save: "Save Channel"
+        cancel: "Cancel"
+        provider: "Provider"
+        channel_validation:
+          ok: "Valid"
+          fail: "Invalid format"
+      edit_rule_modal:
+        title: Edit Rule
+        save: Save Rule
+        cancel: Cancel
+        provider: Provider
+        type: Type
+        channel: Channel
+        filter: Filter
+        category: Category
+        group: Group
+        tags: Tags
+        instructions:
+          type: "Change the type to trigger notifications for group messages or mentions"
+          filter: "Notification level. Mute overrides other matching rules"
+          category: "This rule will only apply to topics in the specified category"
+          group: "This rule will apply to posts referencing this group"
+          tags: "If specified, this rule will only apply to topics which have at least one of these tags"
+      provider:
+        #######################################
+        ########### SLACK STRINGS #############
+        #######################################
+        slack:
+          title: "Slack"
+          param:
+            identifier:
+              title: Channel
+              help: "e.g. #channel, @username."
+          errors:
+            action_prohibited: "The bot does not have permission to post to that channel"
+            channel_not_found: "The specified channel does not exist on slack"
+        #######################################
+        ########## TELEGRAM STRINGS ###########
+        #######################################
+        telegram:
+          title: "Telegram"
+          param:
+            name:
+              title: "Name"
+              help: "A name to describe the channel. It is not used for the connection to Telegram."
+            chat_id:
+              title: Chat ID
+              help: A number given to you by the bot, or a broadcast channel identifier in the form @channelname
+          errors:
+            channel_not_found: "The specified channel does not exist on Telegram"
+            forbidden: "The bot does not have permission to post to this channel"
+        #######################################
+        ########### DISCORD STRINGS ###########
+        #######################################
+        discord:
+          title: "Discord"
+          param:
+            name:
+              title: "Name"
+              help: "A name to describe the channel. It is not used for the connection to Discord."
+            webhook_url:
+              title: Webhook URL
+              help: The webhook URL created in your Discord server settings
+        #######################################
+        ######### MATTERMOST STRINGS ##########
+        #######################################
+        mattermost:
+          title: "Mattermost"
+          param:
+            identifier:
+              title: Channel
+              help: "e.g. #channel, @username."
+          errors:
+            channel_not_found: "The specified channel does not exist on Mattermost"
+        #######################################
+        ############ MATRIX STRINGS ###########
+        #######################################
+        matrix:
+          title: "Matrix"
+          param:
+            name:
+              title: "Name"
+              help: "A name to describe the channel. It is not used for the connection to Matrix."
+            room_id:
+              title: "Room ID"
+              help: "The 'private identifier' for the room. It should look something like !abcdefg:matrix.org"
+          errors:
+            unknown_token: "Access token is invalid"
+            unknown_room: "Room ID is invalid"
+        #######################################
+        ############# ZULIP STRINGS ###########
+        #######################################
+        zulip:
+          title: "Zulip"
+          param:
+            stream:
+              title: "Stream"
+              help: "The name of the Zulip stream the message should be sent to. e.g. 'general'"
+            subject:
+              title: "Subject"
+              help: "The subject that these messages sent by the bot should be given"
+          errors:
+            does_not_exist: "That stream does not exist on Zulip"
+        #######################################
+        ######## ROCKET CHAT STRINGS ##########
+        #######################################
+        rocketchat:
+          title: "Rocket.Chat"
+          param:
+            identifier:
+              title: Channel
+              help: "e.g. #channel, @username."
+          errors:
+            invalid_channel: "That channel does not exist on Rocket Chat"
+        #######################################
+        ############ GITTER STRINGS ###########
+        #######################################
+        gitter:
+          title: "Gitter"
+          param:
+            name:
+              title: "Name"
+              help: "A Gitter room's name e.g. gitterHQ/services."
+            webhook_url:
+              title: "Webhook URL"
+              help: "The URL provided when you create a new integration in a Gitter room."
+        #######################################
+        ########## FLOWDOCK STRINGS ###########
+        #######################################
+        flowdock:
+          title: "Flowdock"
+          param:
+            flow_token:
+              title: "Flow Token"
+              help: "The flow token provided after creating a source for a flow into which you want to send messages."
+        #######################################
+        ########## GROUPME STRINGS ###########
+        #######################################
+        groupme:
+          title: "GroupMe"
+          param:
+            groupme_instance_name:
+              title: "GroupMe Instance Name"
+              help: "name of the Groupme instance as listed in Site Settings. use 'all' to send to all  instances"
+          errors:
+            not_found: "The path you attempted to post your message to was not found. Check the Bot ID in Site Settings."
+            instance_names_issue: "instance names incorrectly formatted or not provided"
+        ############################################
+        ######### MICROSOFT TEAMS STRINGS ##########
+        ############################################
+        teams:
+          title: "Microsoft Teams"
+          param:
+            name:
+              title: "Name"
+              help: "A Teams channel name e.g. discourse"
+            webhook_url:
+              title: "Webhook URL"
+              help: "The URL provided when you create a new incoming webhook"
+          errors:
+            invalid_channel: "That channel does not exist on Microsoft Teams"
+        webex:
+          title: "Webex Teams"
+          param:
+            name:
+              title: "Name"
+              help: "A Webex space name e.g. discourse"
+            webhook_url:
+              title: "Webhook URL"
+              help: "The URL provided when you create a new incomming webhook"
+          errors:
+            invalid_channel: "That channel does not exist on Webex"
+        google:
+          title: "Google Chat"
+          param:
+            name:
+              title: "Name"
+              help: "A name for the channel (only shown in the Discourse admin interface)"
+            webhook_url:
+              title: "Webhook URL"
+              help: "The URL provided when you create a new webhook"
+    discourse_automation:
+      scriptables:
+        send_slack_message:
+          title: Send Slack message
+          fields:
+            message:
+              label: Message
+            url:
+              label: URL
+            channel:
+              label: Channel
