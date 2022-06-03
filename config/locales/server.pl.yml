@@ -1,6 +1,6 @@
-uk:
+pl:
   site_settings:
-    chat_integration_enabled: 'Увімкнути плагін інтеграції дискурс-чату'
+    chat_integration_enabled: 'Enable the discourse-chat-integration plugin'
     chat_integration_discourse_username: 'Username of user to act as when fetching content.'
     chat_integration_delay_seconds: 'Number of seconds to wait after post creation before sending chat notitifications'
     #######################################
@@ -21,7 +21,7 @@ uk:
     #######################################
     chat_integration_telegram_enabled: "Enable the Telegram chat-integration provider"
     chat_integration_telegram_access_token: "Your bot's access token from the Telegram botfather"
-    chat_integration_telegram_excerpt_length: "Довжина витягу телеграмового повідомлення"
+    chat_integration_telegram_excerpt_length: "Telegram post excerpt length"
     chat_integration_telegram_enable_slash_commands: "Allow telegram subscriptions to be managed using 'slash commands'"
     #######################################
     ########## DISCORD SETTINGS ###########
@@ -93,13 +93,13 @@ uk:
   discourse_automation:
     scriptables:
       send_slack_message:
-        title: Send Slack message
+        title: Wyślij wiadomość Slack
   chat_integration:
-    all_categories: "(усі категорії)"
-    deleted_category: "(видалена категорія)"
-    deleted_group: "(видалена група)"
+    all_categories: "(wszystkie kategorie)"
+    deleted_category: "(deleted category)"
+    deleted_group: "(deleted group)"
     group_mention_template: "mentions of: @%{name}"
-    group_message_template: "повідомлення до: @ %{name}"
+    group_message_template: "messages to: @%{name}"
     admin_error: "Some chat integration channels have errors. Visit <a href='%{base_path}/admin/plugins/chat-integration'>the chat integration section</a> to find out more."
     provider:
       #######################################
@@ -110,17 +110,17 @@ uk:
           header: |
             *Rules for this channel*
             (if multiple rules match a post, the topmost rule is executed)
-          no_rules: "Для цього каналу немає правил. Запустіть `/discourse help` для отримання інструкцій."
+          no_rules: "There are no rules set up for this channel. Run `/discourse help` for instructions."
           rule_string: "*%{index})* *%{filter}* posts in *%{category}*"
-          rule_string_tags_suffix: "з тегами: * %{tags} *"
+          rule_string_tags_suffix: " with tags: *%{tags}*"
         parse_error: "Sorry, I didn't understand that. Run `/discourse help` for instructions."
         create:
-          created: "Правило створено успішно"
-          updated: "Правило успішно оновлено"
-          error: "На жаль, під час створення цього правила сталася помилка."
+          created: "Rule created successfully"
+          updated: "Rule updated successfully"
+          error: "Sorry, an error occured while creating that rule."
         delete:
-          success: "Правило успішно видалено"
-          error: "На жаль, під час видалення цього правила сталася помилка. Запустіть `/discourse status` для списку правил."
+          success: "Rule deleted successfully"
+          error: "Sorry, an error occured while deleting that rule. Run `/discourse status` for a list of rules."
         not_found:
           tag: "The *%{name}* tag cannot be found."
           category: "The *%{name}* category cannot be found. Available categories: *%{list}*"
@@ -153,8 +153,8 @@ uk:
           first_message_pretext: "starting %{n} messages ago:"
           last_message_pretext: "and ending %{n} messages ago:"
           posted_in: "posted in %{name}"
-          change_first_message: "Змінити перше повідомлення ..."
-          change_last_message: "Змінити останнє повідомлення ..."
+          change_first_message: "Change first message..."
+          change_last_message: "Change last message..."
           loading: "Loading the transcript..."
           error_users: "Error: unable to fetch users from Slack"
           error_history: "Error: unable to fetch channel history from Slack"
@@ -173,16 +173,16 @@ uk:
           header: |
             <b>Rules for this channel</b>
             (if multiple rules match a post, the topmost rule is executed)
-          no_rules: "Для цього каналу немає правил. Запустіть <code>/help</code> для нструкцій."
+          no_rules: "There are no rules set up for this channel. Run <code>/help</code> for instructions."
           rule_string: "<b>%{index})</b> <b>%{filter}</b> posts in <b>%{category}</b>"
-          rule_string_tags_suffix: "з тегами: <b>%{tags}</b>"
-        parse_error: "Вибачте, я цього не зрозумів. Запустіть <code>/help</code> для інструкцій."
+          rule_string_tags_suffix: " with tags: <b>%{tags}</b>"
+        parse_error: "Sorry, I didn't understand that. Run <code>/help</code> for instructions."
         create:
-          created: "Правило створено успішно"
-          updated: "Правило успішно оновлено"
-          error: "На жаль, під час створення цього правила сталася помилка."
+          created: "Rule created successfully"
+          updated: "Rule updated successfully"
+          error: "Sorry, an error occured while creating that rule."
         delete:
-          success: "Правило успішно видалено"
+          success: "Rule deleted successfully"
           error: "Sorry, an error occured while deleting that rule. Run <code>/status</code> for a list of rules."
         not_found:
           tag: "The <b>%{name}</b> tag cannot be found."
@@ -213,17 +213,17 @@ uk:
           header: |
             *Rules for this channel*
             (if multiple rules match a post, the topmost rule is executed)
-          no_rules: "Для цього каналу немає правил. Запустіть `/discourse help` для отримання інструкцій."
+          no_rules: "There are no rules set up for this channel. Run `/discourse help` for instructions."
           rule_string: "*%{index})* *%{filter}* posts in *%{category}*"
-          rule_string_tags_suffix: "з тегами: * %{tags} *"
+          rule_string_tags_suffix: " with tags: *%{tags}*"
         parse_error: "Sorry, I didn't understand that. Run `/discourse help` for instructions."
         create:
-          created: "Правило створено успішно"
-          updated: "Правило успішно оновлено"
-          error: "На жаль, під час створення цього правила сталася помилка."
+          created: "Rule created successfully"
+          updated: "Rule updated successfully"
+          error: "Sorry, an error occured while creating that rule."
         delete:
-          success: "Правило успішно видалено"
-          error: "На жаль, під час видалення цього правила сталася помилка. Запустіть `/discourse status` для списку правил."
+          success: "Rule deleted successfully"
+          error: "Sorry, an error occured while deleting that rule. Run `/discourse status` for a list of rules."
         not_found:
           tag: "The *%{name}* tag cannot be found."
           category: "The *%{name}* category cannot be found. Available categories: *%{list}*"

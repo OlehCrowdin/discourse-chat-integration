@@ -1,9 +1,3 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 de:
   js:
     admin:
@@ -24,7 +18,7 @@ de:
       create_rule: "Regel erstellen"
       create_channel: "Kanal erstellen"
       delete_channel: "Löschen"
-      test_channel: "Test"
+      test_channel: "Testen"
       edit_channel: "Bearbeiten"
       channel_delete_confirm: "Bist du sicher, dass du diesen Kanal löschen möchtest? Alle dazugehörigen Regeln werden gelöscht."
       test_modal:
@@ -44,7 +38,7 @@ de:
         watch: 'Alle Beiträge und Antworten'
         thread: 'Alle Beiträge mit Thread-Antworten'
       rule_table:
-        filter: "Filter"
+        filter: "Filtern"
         category: "Kategorie"
         tags: "Schlagwörter"
         edit_rule: "Bearbeiten"
@@ -53,7 +47,7 @@ de:
         title: "Kanal bearbeiten"
         save: "Kanal speichern"
         cancel: "Abbrechen"
-        provider: "Provider"
+        provider: "Anbieter"
         channel_validation:
           ok: "Gültig"
           fail: "Ungültiges Format"
@@ -61,10 +55,10 @@ de:
         title: Regel bearbeiten
         save: Regel speichern
         cancel: Abbrechen
-        provider: Provider
+        provider: Anbieter
         type: Typ
         channel: Kanal
-        filter: Filter
+        filter: Filtern
         category: Kategorie
         group: Gruppe
         tags: Schlagwörter
@@ -75,6 +69,9 @@ de:
           group: "Diese Regel wird auf Beiträge angewendet, die diese Gruppe referenzieren"
           tags: "Wenn angegeben, wird diese Regel nur auf Themen angewendet, die mindestens eines der angegebenen Schlagwörter haben"
       provider:
+        #######################################
+        ########### SLACK STRINGS #############
+        #######################################
         slack:
           title: "Slack"
           param:
@@ -84,8 +81,11 @@ de:
           errors:
             action_prohibited: "Der Bot hat keine Berechtigung, in diesem Kanal zu schreiben"
             channel_not_found: "Der angegebene Kanal existiert nicht auf Slack"
+        #######################################
+        ########## TELEGRAM STRINGS ###########
+        #######################################
         telegram:
-          title: "Telegram"
+          title: "Telegramm"
           param:
             name:
               title: "Name"
@@ -96,6 +96,9 @@ de:
           errors:
             channel_not_found: "Der angegebene Kanal existiert nicht auf Telegram"
             forbidden: "Der Bot hat keine Berechtigung, in diesem Kanal zu schreiben"
+        #######################################
+        ########### DISCORD STRINGS ###########
+        #######################################
         discord:
           title: "Discord"
           param:
@@ -105,14 +108,20 @@ de:
             webhook_url:
               title: Webhook-URL
               help: Die Webhook-URL, die in den Einstellungen deines Discord-Servers erstellt wurde
+        #######################################
+        ######### MATTERMOST STRINGS ##########
+        #######################################
         mattermost:
-          title: "Mattermost"
+          title: "Wichtigste"
           param:
             identifier:
               title: Kanal
               help: "z. B. #kanal, @benutzername."
           errors:
             channel_not_found: "Der angegebene Kanal existiert nicht in Mattermost"
+        #######################################
+        ############ MATRIX STRINGS ###########
+        #######################################
         matrix:
           title: "Matrix"
           param:
@@ -125,6 +134,9 @@ de:
           errors:
             unknown_token: "Zugriffstoken ist ungültig"
             unknown_room: "Raum-ID ist ungültig"
+        #######################################
+        ############# ZULIP STRINGS ###########
+        #######################################
         zulip:
           title: "Zulip"
           param:
@@ -136,6 +148,9 @@ de:
               help: "Der Betreff, den die Nachrichten haben sollen, die der Bot versendet"
           errors:
             does_not_exist: "Dieser Stream existiert nicht auf Zulip"
+        #######################################
+        ######## ROCKET CHAT STRINGS ##########
+        #######################################
         rocketchat:
           title: "Rocket.Chat"
           param:
@@ -144,6 +159,9 @@ de:
               help: "z. B. #kanal, @benutzername."
           errors:
             invalid_channel: "Dieser Kanal exisitert nicht in Rocket Chat"
+        #######################################
+        ############ GITTER STRINGS ###########
+        #######################################
         gitter:
           title: "Gitter"
           param:
@@ -153,12 +171,18 @@ de:
             webhook_url:
               title: "Webhook-URL"
               help: "Die URL, welche beim Erstellen einer neuen Integration in einem Gitter-Raum angegeben wird."
+        #######################################
+        ########## FLOWDOCK STRINGS ###########
+        #######################################
         flowdock:
           title: "Flowdock"
           param:
             flow_token:
               title: "Flow-Token"
               help: "Das Flow-Token, das nach dem Erstellen einer Quelle für einen Flow angegeben wird, an den du Nachrichten senden möchtest."
+        #######################################
+        ########## GROUPME STRINGS ###########
+        #######################################
         groupme:
           title: "GroupMe"
           param:
@@ -168,8 +192,11 @@ de:
           errors:
             not_found: "Der Pfad, unter dem du versucht hast, deine Nachricht zu veröffentlichen, wurde nicht gefunden. Überprüfe die Bot-ID in den Website-Einstellungen."
             instance_names_issue: "Instanznamen falsch formatiert oder nicht angegeben"
+        ############################################
+        ######### MICROSOFT TEAMS STRINGS ##########
+        ############################################
         teams:
-          title: "Microsoft Teams"
+          title: "Microsoft-Teams"
           param:
             name:
               title: "Name"
@@ -191,7 +218,7 @@ de:
           errors:
             invalid_channel: "Dieser Kanal existiert nicht in Webex"
         google:
-          title: "Google Chat"
+          title: "Google-Chat"
           param:
             name:
               title: "Name"
@@ -199,3 +226,14 @@ de:
             webhook_url:
               title: "Webhook-URL"
               help: "Die URL, welche beim Erstellen eines neuen Webhook angegeben wird"
+    discourse_automation:
+      scriptables:
+        send_slack_message:
+          title: Slack Nachricht senden
+          fields:
+            message:
+              label: Nachricht
+            url:
+              label: URL
+            channel:
+              label: Kanal
