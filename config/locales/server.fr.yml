@@ -1,14 +1,11 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 fr:
   site_settings:
     chat_integration_enabled: 'Activer l''extension discourse-chat-integration'
     chat_integration_discourse_username: 'Nom d''utilisateur utilisé pour récupérer le contenu.'
     chat_integration_delay_seconds: 'Nombre de secondes à attendre après la création d''un message avant d''envoyer des notifications de chat'
+    #######################################
+    ########## SLACK SETTINGS #############
+    #######################################
     chat_integration_slack_username: "Nom d'utilisateur du bot utilisé pour publier sur Slack"
     chat_integration_slack_enabled: 'Activer le fournisseur d''intégration de chat Slack'
     chat_integration_slack_access_token: 'Jeton d''accès OAuth pour l''authentification sur Slack'
@@ -16,46 +13,87 @@ fr:
     chat_integration_slack_excerpt_length: 'Longueur des extraits de messages Slack'
     chat_integration_slack_icon_url: 'Icône à utiliser pour publier sur Slack (par défaut, le logo du forum est utilisé)'
     chat_integration_slack_outbound_webhook_url: "Pour utiliser le système « Webhook entrant » de Slack au lieu de l'API OAuth. Non recommandé."
+    chat_integration_slack_transcript_quote: Wrap slack transcript in [quote] tags?
     errors:
       chat_integration_slack_api_configs_are_empty: "Vous devez saisir soit une URL de webhook sortant, soit un jeton d'accès"
+    #######################################
+    ######### TELEGRAM SETTINGS ###########
+    #######################################
     chat_integration_telegram_enabled: "Activer le fournisseur d'intégration de chat Telegram"
     chat_integration_telegram_access_token: "Le jeton d'accès de votre bot fourni par le botfather Telegram"
     chat_integration_telegram_excerpt_length: "Longueur des extraits de messages Telegram"
     chat_integration_telegram_enable_slash_commands: "Autoriser la gestion des abonnements Telegram à l'aide de « commandes slash »"
+    #######################################
+    ########## DISCORD SETTINGS ###########
+    #######################################
     chat_integration_discord_enabled: "Activer le fournisseur d'intégration de chat Discord"
     chat_integration_discord_message_content: "Message à inclure au-dessus du résumé lors de l'envoi d'une notification à Discord"
     chat_integration_discord_excerpt_length: "Longueur des extraits de messages Discord"
+    #######################################
+    ######## MATTERMOST SETTINGS ##########
+    #######################################
     chat_integration_mattermost_enabled: "Activer le fournisseur d'intégration de chat Mattermost"
     chat_integration_mattermost_webhook_url: 'URL pour le webhook Mattermost'
     chat_integration_mattermost_incoming_webhook_token: 'Le jeton de vérification utilisé pour authentifier les demandes entrantes'
     chat_integration_mattermost_icon_url: "Icône à utiliser pour publier des messages sur Mattermost (par défaut, le logo du forum est utilisé)"
     chat_integration_mattermost_excerpt_length: "Longueur des extraits de messages Mattermost"
+    #######################################
+    ############ MATRIX SETTINGS ##########
+    #######################################
     chat_integration_matrix_enabled: "Activer le fournisseur d'intégration de chat Matrix"
     chat_integration_matrix_homeserver: "Serveur local auquel se connecter. Assurez-vous d'inclure le protocole"
     chat_integration_matrix_access_token: "Jeton d'accès au compte Matrix du bot"
     chat_integration_matrix_excerpt_length: "Longueur des extraits de messages Matrix"
     chat_integration_matrix_use_notice: "Utiliser la notification au lieu d'un message simple"
+    #######################################
+    ########### ZULIP SETTINGS ############
+    #######################################
     chat_integration_zulip_enabled: "Activer le fournisseur d'intégration de chat Zulip"
     chat_integration_zulip_server: "L'adresse URL de base pour votre serveur Zulip. Assurez-vous d'y inclure http(s)://"
     chat_integration_zulip_bot_email_address: "L'adresse e-mail associée à votre bot Zulip"
     chat_integration_zulip_bot_api_key: "La clé d'API pour votre bot Zulip"
     chat_integration_zulip_excerpt_length: "Longueur des extraits de messages Zulip"
+    #######################################
+    ###### ROCKET CHAT SETTINGS ###########
+    #######################################
     chat_integration_rocketchat_enabled: "Activer le fournisseur d'intégration de chat Rocket.Chat"
     chat_integration_rocketchat_webhook_url: "L'URL du webhook d'intégration de Rocket.Chat"
     chat_integration_rocketchat_excerpt_length: "Longueur des extraits de messages Rocket.Chat"
+    #######################################
+    ############ GITTER SETTINGS ##########
+    #######################################
     chat_integration_gitter_enabled: "Activer le fournisseur d'intégration de chat Gitter"
+    #######################################
+    ########## FLOWDOCK SETTINGS ##########
+    #######################################
     chat_integration_flowdock_enabled: "Activer le fournisseur d'intégration de chat Flowdock"
     chat_integration_flowdock_excerpt_length: "Longueur des extraits de messages Flowdock"
+    #######################################
+    ########## GROUPME SETTINGS ##########
+    #######################################
     chat_integration_groupme_enabled: "Activer le fournisseur d'intégration de chat GroupMe"
     chat_integration_groupme_excerpt_length: "Longueur des extraits de message GroupMe"
     chat_integration_groupme_bot_ids: "*obligatoire* ID du ou des bots, séparés pour des virgules s'il y en a plusieurs"
     chat_integration_groupme_instance_names: " *obligatoire* Nom du ou des chats GroupMe, séparés par des virgules s'il y en a plusieurs (même ordre que les ID des bots)"
+    ###########################################
+    ######## MICROSOFT TEAMS SETTINGS #########
+    ###########################################
     chat_integration_teams_enabled: "Activer le fournisseur d'intégration de chat Microsoft Teams"
     chat_integration_teams_excerpt_length: "Longueur des extraits de messages Microsoft Teams"
+    ###########################################
+    ######## WEBEX TEAMS SETTINGS #########
+    ###########################################
     chat_integration_webex_enabled: "Activer le fournisseur d'intégration de chat Webex Teams"
     chat_integration_webex_excerpt_length: "Longueur des extraits de messages Webex Teams"
+    ###########################################
+    ######## GOOGLE SETTINGS #########
+    ###########################################
     chat_integration_google_enabled: "Activer le fournisseur d'intégration de chat Google Chat"
     chat_integration_google_excerpt_length: "Longueur des extraits de messages Google Chat"
+  discourse_automation:
+    scriptables:
+      send_slack_message:
+        title: Envoyer un message Slack
   chat_integration:
     all_categories: "(toutes les catégories)"
     deleted_category: "(catégorie supprimée)"
@@ -64,6 +102,9 @@ fr:
     group_message_template: "messages à : @%{name}"
     admin_error: "Certains canaux d'intégration de chat comportent des erreurs. Visitez <a href='%{base_path}/admin/plugins/chat-integration'>la section relative à l'intégration de chat</a> pour en savoir plus."
     provider:
+      #######################################
+      ########## SLACK STRINGS ##############
+      #######################################
       slack:
         status:
           header: |
@@ -118,6 +159,9 @@ fr:
           error_users: "Erreur : impossible de récupérer les utilisateurs à partir de Slack"
           error_history: "Erreur : impossible de récupérer l'historique du canal à partir de Slack"
           error_ts: "Erreur : impossible de récupérer le message demandé à partir de Slack"
+      #######################################
+      ########## TELEGRAM STRINGS ###########
+      #######################################
       telegram:
         unknown_chat: "Ce chat n'est pas configuré sur %{site_title}. Demandez à un administrateur d'ajouter un canal avec l'ID de chat %{chat_id}."
         known_chat: "Ce chat est configuré sur %{site_title}. Configurez-le dans le panneau d'administration. (ID de chat : %{chat_id})"
@@ -156,15 +200,21 @@ fr:
           <b>Lister les règles :</b> <code>/status</code>
 
           <b>Aide :</b> <code>/help</code>
+      #######################################
+      ########### HIPCHAT STRINGS ###########
+      #######################################
       hipchat:
         message: <b>%{user}</b> a publié dans <a href="%{post_url}">%{title}</a>
+      #######################################
+      ######## MATTERMOST STRINGS ###########
+      #######################################
       mattermost:
         status:
           header: |
             *Règles pour ce canal*
             (si plusieurs règles correspondent à un message, la première règle sera appliquée)
           no_rules: "Aucune règle n'est définie pour ce canal. Exécutez « /discourse help » pour obtenir des instructions."
-          rule_string: "*%{index})* *%{filter}* messages dans la catégorie *%{category}*"
+          rule_string: "*%{index})* *%{filter}* messages dans *%{category}*"
           rule_string_tags_suffix: " avec les étiquettes : *%{tags}*"
         parse_error: "Désolé, je n'ai pas compris. Exécutez « /discourse help » pour obtenir des instructions."
         create:
@@ -190,6 +240,9 @@ fr:
           *Lister les règles :* « /discourse status »
 
           *Aide :* « /discourse help »
+      #######################################
+      ############ MATRIX STRINGS ###########
+      #######################################
       matrix:
         text_message: "%{user} a publié un message dans %{title} - %{post_url}"
         formatted_message: |
@@ -197,16 +250,28 @@ fr:
           <blockquote>
           %{excerpt}
           </blockquote>
+      #######################################
+      ############# ZULIP STRINGS ###########
+      #######################################
       zulip:
         message: |
           **%{user}** a publié un message dans **[%{title}](%{post_url})**
           ~~~citation
           %{excerpt}
           ~~~
+      #######################################
+      ########### FLOWDOCK STRINGS ##########
+      #######################################
       flowdock:
         message_title: "publié"
+      #######################################
+      ########### GROUPME STRINGS ##########
+      #######################################
       groupme:
         message_title: "publié"
+      #######################################
+      ############ GOOGLE STRINGS ###########
+      #######################################
       google:
         new_post: "Nouveau message sur %{site_title}"
         new_topic: "Nouveau sujet sur %{site_title}"
