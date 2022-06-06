@@ -122,7 +122,7 @@ es:
           success: "Regla eliminada correctamente"
           error: "Lo sentimos, ha ocurrido un error al eliminar esa regla. Ejecuta `/discourse status` para una lista de reglas."
         not_found:
-          tag: "The *%{name}* tag cannot be found."
+          tag: "Activar el plugin discourse-chat-integration%{name}."
           category: "La categoría *%{name}* no se puede encontrar. Categorías disponibles: *%{list}*"
         help: |
           *Nueva regla:* `/discourse [thread|watch|follow|mute] [category] [tag:name]`
@@ -188,18 +188,7 @@ es:
           tag: "La etiqueta <b>%{name}</b> no se ha encontrado."
           category: "La categoría <b>%{name}</b> no se puede encontrar. Categorías disponibles: <b>%{list}</b>"
         help: |
-          <b>New rule:</b> <code>/[watch|follow|mute] [category] [tag:name]</code>
-          (you must specify a rule type and at least one category or tag)
-          - <b>watch</b> – notify this channel for new topics and new replies
-          - <b>follow</b> – notify this channel for new topics
-          - <b>mute</b> – block notifications to this channel
-
-          <b>Remove rule:</b> <code>/remove [rule number]</code>
-          (<code>[rule number]</code> can be found by running <code>/status</code>)
-
-          <b>List rules:</b> <code>/status</code>
-
-          <b>Help:</b> <code>/help</code>
+          Activar el plugin discourse-chat-integration
       #######################################
       ########### HIPCHAT STRINGS ###########
       #######################################
@@ -225,7 +214,7 @@ es:
           success: "Regla eliminada correctamente"
           error: "Lo sentimos, ha ocurrido un error al eliminar esa regla. Ejecuta `/discourse status` para una lista de reglas."
         not_found:
-          tag: "The *%{name}* tag cannot be found."
+          tag: "Activar el plugin discourse-chat-integration%{name}."
           category: "La categoría *%{name}* no se puede encontrar. Categorías disponibles: *%{list}*"
         help: |
           *Nueva regla:* `/discourse [watch|follow|mute] [category] [tag:name]`
