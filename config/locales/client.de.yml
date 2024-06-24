@@ -1,9 +1,3 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 de:
   js:
     admin:
@@ -13,189 +7,233 @@ de:
     chat_integration:
       menu_title: "Chat-Integrationen"
       settings: "Einstellungen"
-      no_providers: "Du musst Provider in den Plug-in-Einstellungen aktivieren"
-      channels_with_errors: "Das letzte Versenden von Nachrichten ist bei einigen Kanälen dieses Providers fehlgeschlagen. Klicke auf das/die Fehlersymbol(e), um mehr zu erfahren."
-      channel_exception: "Ein unbekannter Fehler ist aufgetreten, als zuletzt eine Nachricht an diesen Kanal gesendet wurde."
+      no_providers: "Sie müssen einige Anbieter in den Plugin-Einstellungen aktivieren"
+      channels_with_errors: "Einige Kanäle für diesen Provider sind beim letzten Mal fehlgeschlagen. Klicken Sie auf das Fehlersymbol, um mehr zu erfahren."
+      channel_exception: "Beim letzten Senden einer Nachricht an diesen Kanal ist ein unbekannter Fehler aufgetreten."
       group_mention_template: "Erwähnungen von: @%{name}"
       group_message_template: "Nachrichten an: @%{name}"
-      choose_group: "(wähle eine Gruppe)"
+      choose_group: "(Gruppe auswählen)"
       all_categories: "(alle Kategorien)"
-      all_tags: "(alle Schlagwörter)"
+      all_tags: "(alle Tags)"
       create_rule: "Regel erstellen"
       create_channel: "Kanal erstellen"
       delete_channel: "Löschen"
-      test_channel: "Test"
+      test_channel: "Testen"
       edit_channel: "Bearbeiten"
-      channel_delete_confirm: "Bist du sicher, dass du diesen Kanal löschen möchtest? Alle dazugehörigen Regeln werden gelöscht."
+      channel_delete_confirm: "Sind Sie sicher, dass Sie diesen Kanal löschen möchten? Alle zugehörigen Regeln werden gelöscht."
       test_modal:
-        title: "Test-Nachricht senden"
+        title: "Testnachricht senden"
         topic: "Thema"
-        send: "Test-Nachricht senden"
+        send: "Testnachricht senden"
         close: "Schließen"
-        error: "Ein unbekannter Fehler ist beim Senden der Nachricht aufgetreten. Bitte überprüfe die Website-Protokolle für weitere Informationen."
-        success: "Nachricht erfolgreich versendet"
+        error: "Beim Senden der Nachricht ist ein unbekannter Fehler aufgetreten. Überprüfen Sie die Seitenprotokolle für weitere Informationen."
+        success: "Nachricht erfolgreich gesendet"
       type:
         normal: Normal
-        group_message: Gruppennachricht
-        group_mention: Gruppenerwähnung
+        group_message: Gruppen-Nachricht
+        group_mention: Gruppe Erwähnung
       filter:
-        mute: 'Stummschalten'
-        follow: 'Nur der erste Beitrag'
+        mute: 'Stumm'
+        follow: 'Nur erster Beitrag'
         watch: 'Alle Beiträge und Antworten'
         thread: 'Alle Beiträge mit Thread-Antworten'
       rule_table:
-        filter: "Filter"
+        filter: "Filtern"
         category: "Kategorie"
-        tags: "Schlagwörter"
+        tags: "Tags"
         edit_rule: "Bearbeiten"
         delete_rule: "Löschen"
       edit_channel_modal:
         title: "Kanal bearbeiten"
         save: "Kanal speichern"
         cancel: "Abbrechen"
-        provider: "Provider"
+        provider: "Anbieter"
         channel_validation:
-          ok: "Gültig"
+          ok: "Valid"
           fail: "Ungültiges Format"
       edit_rule_modal:
         title: Regel bearbeiten
         save: Regel speichern
         cancel: Abbrechen
-        provider: Provider
+        provider: Anbieter
         type: Typ
         channel: Kanal
-        filter: Filter
+        filter: Filtern
         category: Kategorie
         group: Gruppe
-        tags: Schlagwörter
+        tags: Tags
         instructions:
-          type: "Ändere den Typ, um Benachrichtigungen für Gruppennachrichten und -erwähnungen auszulösen"
-          filter: "Benachrichtigungsstufe. „Stummschalten“ überschreibt andere zutreffende Regeln"
-          category: "Diese Regel wird nur auf Themen in der angegebenen Kategorie angewendet"
-          group: "Diese Regel wird auf Beiträge angewendet, die diese Gruppe referenzieren"
-          tags: "Wenn angegeben, wird diese Regel nur auf Themen angewendet, die mindestens eines der angegebenen Schlagwörter haben"
+          type: "Ändere den Typ, um Benachrichtigungen für Gruppennachrichten oder Erwähnungen auszulösen"
+          filter: "Benachrichtigungs-Level. Stumm überschreibt andere übereinstimmende Regeln"
+          category: "Diese Regel gilt nur für Themen in der angegebenen Kategorie"
+          group: "Diese Regel gilt für Beiträge, die diese Gruppe referenzieren"
+          tags: "Wenn angegeben, gilt diese Regel nur für Themen, die mindestens einen dieser Tags haben"
       provider:
+        #######################################
+        ########### SLACK STRINGS #############
+        #######################################
         slack:
           title: "Slack"
           param:
             identifier:
               title: Kanal
-              help: "z. B. #kanal, @benutzername."
+              help: "z.B. #channel, @username."
           errors:
-            action_prohibited: "Der Bot hat keine Berechtigung, in diesem Kanal zu schreiben"
+            action_prohibited: "Der Bot hat keine Berechtigung um in diesem Kanal zu posten"
             channel_not_found: "Der angegebene Kanal existiert nicht auf Slack"
+        #######################################
+        ########## TELEGRAM STRINGS ###########
+        #######################################
         telegram:
-          title: "Telegram"
+          title: "Telegramm"
           param:
             name:
               title: "Name"
-              help: "Ein Name, um den Kanal zu beschreiben. Dieser wird nicht verwendet, um die Verbindung mit Telegram herzustellen."
+              help: "Ein Name um den Kanal zu beschreiben. Er wird nicht für die Verbindung zum Telegramm verwendet."
             chat_id:
               title: Chat-ID
-              help: Eine Nummer, die du vom Bot erhalten hast, oder eine Broadcast-Kanal-Kennung in der Form @channelname
+              help: Eine vom Bot angegebene Nummer oder ein Broadcast-Kanal-Identifikator im Formular @channelname
           errors:
             channel_not_found: "Der angegebene Kanal existiert nicht auf Telegram"
-            forbidden: "Der Bot hat keine Berechtigung, in diesem Kanal zu schreiben"
+            forbidden: "Der Bot hat keine Berechtigung in diesem Kanal zu posten"
+        #######################################
+        ########### DISCORD STRINGS ###########
+        #######################################
         discord:
           title: "Discord"
           param:
             name:
               title: "Name"
-              help: "Ein Name, um den Kanal zu beschreiben. Dieser wird nicht verwendet, um die Verbindung mit Discord herzustellen."
+              help: "Ein Name um den Kanal zu beschreiben. Er wird nicht für die Verbindung zu Discord verwendet."
             webhook_url:
               title: Webhook-URL
-              help: Die Webhook-URL, die in den Einstellungen deines Discord-Servers erstellt wurde
+              help: Die Webhook URL wurde in deinen Discord Servereinstellungen erstellt
+        #######################################
+        ######### MATTERMOST STRINGS ##########
+        #######################################
         mattermost:
-          title: "Mattermost"
+          title: "Wichtigste"
           param:
             identifier:
               title: Kanal
-              help: "z. B. #kanal, @benutzername."
+              help: "z.B. #channel, @username."
           errors:
-            channel_not_found: "Der angegebene Kanal existiert nicht in Mattermost"
+            channel_not_found: "Der angegebene Kanal existiert nicht in der Mattermost"
+        #######################################
+        ############ MATRIX STRINGS ###########
+        #######################################
         matrix:
           title: "Matrix"
           param:
             name:
               title: "Name"
-              help: "Ein Name, um den Kanal zu beschreiben. Dieser wird nicht verwendet, um die Verbindung zu Matrix herzustellen."
+              help: "Ein Name um den Kanal zu beschreiben. Er wird nicht für die Verbindung zu Matrix verwendet."
             room_id:
               title: "Raum-ID"
-              help: "Die „private Kennung“ für den Raum. Sie sollte etwa so aussehen: !abcdefg:matrix.org"
+              help: "Der 'private Bezeichner' für den Raum. Er sollte so aussehen wie !abcdefg:matrix.org"
           errors:
             unknown_token: "Zugriffstoken ist ungültig"
             unknown_room: "Raum-ID ist ungültig"
+        #######################################
+        ############# ZULIP STRINGS ###########
+        #######################################
         zulip:
           title: "Zulip"
           param:
             stream:
               title: "Stream"
-              help: "Der Name des Zulip-Streams, an den die Nachricht gesendet werden soll, z. B. „allgemein“"
+              help: "Der Name des Zulip-Streams, an den die Nachricht gesendet werden soll, z.B. 'allgemein'"
             subject:
               title: "Betreff"
-              help: "Der Betreff, den die Nachrichten haben sollen, die der Bot versendet"
+              help: "Der Betreff für diese vom Bot gesendeten Nachrichten sollte angegeben werden"
           errors:
             does_not_exist: "Dieser Stream existiert nicht auf Zulip"
+        #######################################
+        ######## ROCKET CHAT STRINGS ##########
+        #######################################
         rocketchat:
           title: "Rocket.Chat"
           param:
             identifier:
               title: Kanal
-              help: "z. B. #kanal, @benutzername."
+              help: "z.B. #channel, @username."
           errors:
-            invalid_channel: "Dieser Kanal exisitert nicht in Rocket Chat"
+            invalid_channel: "Dieser Kanal existiert nicht im Raketen-Chat"
+        #######################################
+        ############ GITTER STRINGS ###########
+        #######################################
         gitter:
           title: "Gitter"
           param:
             name:
               title: "Name"
-              help: "Der Name eines Gitter-Raums, z. B. gitterHQ/services"
+              help: "Name eines Gitter-Raumes z.B. gitterHQ/Dienste."
             webhook_url:
               title: "Webhook-URL"
-              help: "Die URL, welche beim Erstellen einer neuen Integration in einem Gitter-Raum angegeben wird."
+              help: "Die URL, die beim Erstellen einer neuen Integration in einem Gitter-Raum angegeben wird."
+        #######################################
+        ########## FLOWDOCK STRINGS ###########
+        #######################################
         flowdock:
           title: "Flowdock"
           param:
             flow_token:
               title: "Flow-Token"
-              help: "Das Flow-Token, das nach dem Erstellen einer Quelle für einen Flow angegeben wird, an den du Nachrichten senden möchtest."
+              help: "Das Fluss-Token wird nach dem Erstellen einer Quelle für einen Fluss zur Verfügung gestellt, in den Sie Nachrichten senden möchten."
+        #######################################
+        ########## GROUPME STRINGS ###########
+        #######################################
         groupme:
           title: "GroupMe"
           param:
             groupme_instance_name:
-              title: "Name der GroupMe-Instanz"
-              help: "Name der GroupMe-Instanz, wie er in den Website-Einstellungen aufgeführt ist. Verwende „alle“, um an alle Instanzen zu senden"
+              title: "Name der GroupMe Instanz"
+              help: "Name der Gruppeninstanz, wie in den Site-Einstellungen aufgelistet. Verwenden Sie 'all', um an alle Instanzen zu senden"
           errors:
-            not_found: "Der Pfad, unter dem du versucht hast, deine Nachricht zu veröffentlichen, wurde nicht gefunden. Überprüfe die Bot-ID in den Website-Einstellungen."
-            instance_names_issue: "Instanznamen falsch formatiert oder nicht angegeben"
+            not_found: "Der Pfad, den Sie versucht haben, Ihre Nachricht zu posten, wurde nicht gefunden. Überprüfen Sie die Bot-ID in den Site-Einstellungen."
+            instance_names_issue: "instanznamen falsch formatiert oder nicht angegeben"
+        ############################################
+        ######### MICROSOFT TEAMS STRINGS ##########
+        ############################################
         teams:
-          title: "Microsoft Teams"
+          title: "Microsoft-Teams"
           param:
             name:
               title: "Name"
-              help: "Ein Teams-Kanalname, z. B. „Discourse“"
+              help: "Ein Team-Kanalname z.B. Diskurs"
             webhook_url:
               title: "Webhook-URL"
-              help: "Die URL, welche beim Erstellen eines neuen eingehenden Webhook angegeben wird"
+              help: "Die URL, die beim Erstellen eines neuen eingehenden Webhooks angegeben wird"
           errors:
-            invalid_channel: "Dieser Kanal existiert nicht in Microsoft Teams"
+            invalid_channel: "Dieser Kanal existiert nicht in Microsoft-Teams"
         webex:
           title: "Webex Teams"
           param:
             name:
               title: "Name"
-              help: "Ein Webex-Raumname, z. B. „Discourse“"
+              help: "Ein Webex-Raumname z.B. Diskurs"
             webhook_url:
               title: "Webhook-URL"
-              help: "Die URL, welche beim Erstellen eines neuen eingehenden Webhook angegeben wird"
+              help: "Die URL, die beim Erstellen eines neuen eingehenden Webhooks angegeben wird"
           errors:
-            invalid_channel: "Dieser Kanal existiert nicht in Webex"
+            invalid_channel: "Dieser Kanal existiert nicht auf Webex"
         google:
-          title: "Google Chat"
+          title: "Google-Chat"
           param:
             name:
               title: "Name"
-              help: "Ein Name für den Kanal (wird nur in der Discourse-Administrationsoberfläche angezeigt)"
+              help: "Ein Name für den Kanal (wird nur in der Discourse Admin-Oberfläche angezeigt)"
             webhook_url:
               title: "Webhook-URL"
-              help: "Die URL, welche beim Erstellen eines neuen Webhook angegeben wird"
+              help: "Die URL, die beim Erstellen eines neuen Webhook angegeben wird"
+    discourse_automation:
+      scriptables:
+        send_slack_message:
+          title: Slack Nachricht senden
+          fields:
+            message:
+              label: Nachricht
+            url:
+              label: URL
+            channel:
+              label: Kanal
