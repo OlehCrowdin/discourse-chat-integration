@@ -141,7 +141,7 @@ es:
           title: "Zulip"
           param:
             stream:
-              title: "Stream"
+              title: "Canal"
               help: "El nombre del stream de Zulip al que el mensaje debería enviarse. Ejemplo: «general»"
             subject:
               title: "Asunto"
@@ -229,10 +229,10 @@ es:
     discourse_automation:
       scriptables:
         send_slack_message:
-          title: Send Slack message
+          title: Enviar mensaje de Slack
           fields:
             message:
-              label: Message
+              label: Mensaje
             url:
               label: URL
             channel:
