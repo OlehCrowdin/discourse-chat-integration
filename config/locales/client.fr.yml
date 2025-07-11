@@ -141,7 +141,7 @@ fr:
           title: "Zulip"
           param:
             stream:
-              title: "Stream"
+              title: "Flux"
               help: "Le nom du flux Zulip dans lequel le message devrait être envoyé. P. ex., « général »"
             subject:
               title: "Sujet"
@@ -229,7 +229,7 @@ fr:
     discourse_automation:
       scriptables:
         send_slack_message:
-          title: Send Slack message
+          title: Envoyer un message Slack
           fields:
             message:
               label: Message
