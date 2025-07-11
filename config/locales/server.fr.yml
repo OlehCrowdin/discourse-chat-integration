@@ -13,7 +13,7 @@ fr:
     chat_integration_slack_excerpt_length: 'Longueur des extraits de messages Slack'
     chat_integration_slack_icon_url: 'Icône à utiliser pour publier sur Slack (par défaut, le logo du forum est utilisé)'
     chat_integration_slack_outbound_webhook_url: "Pour utiliser le système « Webhook entrant » de Slack au lieu de l'API OAuth. Non recommandé."
-    chat_integration_slack_transcript_quote: Wrap slack transcript in [quote] tags?
+    chat_integration_slack_transcript_quote: Mettre la transcription Slack entre balises [quote] ?
     errors:
       chat_integration_slack_api_configs_are_empty: "Vous devez saisir soit une URL de webhook sortant, soit un jeton d'accès"
     #######################################
@@ -93,7 +93,7 @@ fr:
   discourse_automation:
     scriptables:
       send_slack_message:
-        title: Send Slack message
+        title: Envoyer un message Slack
   chat_integration:
     all_categories: "(toutes les catégories)"
     deleted_category: "(catégorie supprimée)"
